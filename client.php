@@ -15,6 +15,7 @@ try {
         }
     }else {
         $respuestas = $client->obtenerDepartamentos();
+        var_dump($respuestas);
     }
 
     $arreglo = array();
@@ -33,7 +34,6 @@ try {
     }elseif($arr_headers["Accept"] == "application/json"){
         header("Content-Type: Application/json");
         echo(json_encode($respuestas));
-
     }else{
         echo("ESPECIFIQUE EL FORMATO DE DATOS QUE USTED ESPERA");
     }
