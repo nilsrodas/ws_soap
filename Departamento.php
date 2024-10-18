@@ -29,7 +29,7 @@ class Departamento{
                 INNER JOIN zona z on d.id_zona=z.id_zona;
                 WHERE
                  d.id_zona='.$idzona.';';
-        $data = $db->run($sql)->fetchALL();
+        $data = $db->run($sql)->fetchAll();
         return $data;
     }
 
@@ -45,7 +45,7 @@ class Departamento{
                 INNER JOIN zona z on d.id_zona=z.id_zona;
                 WHERE
                  d.id_departamento='.$iddept.';';
-        $data = $db->run($sql)->fetchALL();
+        $data = $db->run($sql)->fetchAll();
         return $data;
     }
 }
